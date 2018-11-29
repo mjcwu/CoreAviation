@@ -37,8 +37,8 @@ const flightIATA = `flightIata=`;
 const currentFlightPathPoint = {};
 
 (async() => {
-  console.log(`${flightTrackerURL}${flightIATA}BR10`)
-  const searchFlight = await fetch (`${flightTrackerURL}${flightIATA}BR10`).then(res => res.json()).catch(error=>console.log(error));
+  console.log(`${flightTrackerURL}${flightIATA}SQ33`)
+  const searchFlight = await fetch (`${flightTrackerURL}${flightIATA}SQ33`).then(res => res.json()).catch(error=>console.log(error));
   console.log("longitude: ", searchFlight[0].geography.longitude)
   console.log("latitude: ", searchFlight[0].geography.latitude)
   console.log("altitude: ", searchFlight[0].geography.altitude)
