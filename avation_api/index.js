@@ -40,11 +40,17 @@ const currentFlightPathPoint = {};
   console.log(`${flightTrackerURL}${flightIATA}BR10`)
   const searchFlight = await fetch (`${flightTrackerURL}${flightIATA}BR10`).then(res => res.json()).catch(error=>console.log(error));
   console.log("longitude: ", searchFlight[0].geography.longitude)
+  console.log("latitude: ", searchFlight[0].geography.latitude)
   console.log("altitude: ", searchFlight[0].geography.altitude)
   console.log("direction: ", searchFlight[0].geography.direction)
+  console.log("speed: ", searchFlight[0].speed.horizontal)
+  console.log("departure: ", searchFlight[0].departure.iataCode)
+  console.log("arrival: ", searchFlight[0].arrival.iataCode)
+  console.log("aircraft type: ", searchFlight[0].aircraft.iataCode)
+  console.log("airline: ", searchFlight[0].airline.icaoCode)
+  console.log("flight#: ", searchFlight[0].flight.iataNumber)
 
 })();
-
 // -------------------- avation edge api return format ------------------
 // { geography:
 //   { latitude: 48.1153,
