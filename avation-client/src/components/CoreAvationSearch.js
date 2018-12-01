@@ -9,7 +9,7 @@ class CoreAvationSearch extends Component {
   }
   render(){
     return(
-    <main>
+    <main className="CoreAvationSearch">
       <h1>🛫 Flight Search! 🛬</h1>
       <GoogleApiWrapper />
     </main>

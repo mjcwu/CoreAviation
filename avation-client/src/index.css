@@ -6,6 +6,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #001F3F;
+  color: deepskyblue;
 }
 
 code {
@@ -32,5 +34,5 @@ main {
 }
 
 .NavBar > a.active {
-  color: deepskyblue;
+  color: #21CC40;
 }
