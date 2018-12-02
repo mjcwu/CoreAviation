@@ -5,9 +5,9 @@ const NavBar = props => {
   return (
     <nav className="NavBar">
       <NavLink exact to="/">
-        CoreAvation
+        CoreAviation
       </NavLink>
-      <NavLink exact to="/coreavation/search">
+      <NavLink exact to="/coreaviation/search">
         Flight Search
       </NavLink>
     </nav>

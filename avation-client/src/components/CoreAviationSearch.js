@@ -5,6 +5,8 @@ import { Aviation } from "../request";
 class CoreAvationSearch extends Component {
   constructor(props){
     super(props);
+
+    
   }
 
   componentDidMount() {
