@@ -5,10 +5,6 @@ import B747Icon from './B747Icon'
 
 
 export class MapContainer extends Component {
-  constructor(props){
-    super(props);
-    
-  }
 
   state = {
     showingInfoWindow: false,
@@ -34,10 +30,9 @@ export class MapContainer extends Component {
 
   render() {
     const google = window.google
-    const rotate = 100;
     const style = {
-      width: '80%',
-      height: '700px',
+      width: '800px',
+      height: '500px',
     }
     
     const icon = {

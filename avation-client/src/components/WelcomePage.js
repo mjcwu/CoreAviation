@@ -9,7 +9,7 @@ const WelcomePage = props => (
     <div>
       <img src={WelcomeImage} alt="WelcomeImage" style = {{
         width: '80%',
-        height: '700px'
+        height: 'auto'
       }}/> 
     </div>
   </main>
