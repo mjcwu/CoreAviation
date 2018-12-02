@@ -7,7 +7,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #001F3F;
-  color: deepskyblue;
+  
 }
 
 code {
@@ -17,6 +17,7 @@ code {
 
 main {
   padding: 10px;
+  color: deepskyblue;
 }
 
 .NavBar {
@@ -35,4 +36,8 @@ main {
 
 .NavBar > a.active {
   color: #21CC40;
+}
+
+.flightInfo {
+  color: black;
 }

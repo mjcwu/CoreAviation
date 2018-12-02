@@ -69,7 +69,7 @@ export class MapContainer extends Component {
           <InfoWindow
           marker={this.state.activeMarker}
           visible={this.state.showingInfoWindow}>
-            <div>
+            <div className="flightInfo">
               <p>
                   Flight: AC033 <br/>
                 <small>
