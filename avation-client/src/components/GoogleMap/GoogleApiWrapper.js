@@ -36,14 +36,14 @@ export class MapContainer extends Component {
     const google = window.google
     const rotate = 100;
     const style = {
-      width: '75%',
-      height: '75%'
+      width: '80%',
+      height: '700px',
     }
     
     const icon = {
       path: B747Icon.path,
       // url: B747png,
-      fillColor: '#7B68EE',
+      fillColor: '#808000',
       fillOpacity: 1,
       scale: 0.003,
       rotation: this.props.flightInfo.direction+180,
@@ -52,7 +52,7 @@ export class MapContainer extends Component {
     }
 
     return (
-      <div style={style}>
+      <div>
         <Map google={this.props.google}
           onClick={this.onMapClicked}
           style={style}

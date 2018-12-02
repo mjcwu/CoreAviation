@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import GoogleApiWrapper from "./GoogleMap/GoogleApiWrapper"
 import { Aviation } from "../request";
+import AvationForm from "./AviationForm"
 
 class CoreAviationSearch extends Component {
   constructor(props){
@@ -35,10 +36,19 @@ class CoreAviationSearch extends Component {
 
   render(){
     return(
-    <main className="CoreAviationSearch">
+    <main>
       <div>
-        <h1>🛫 Flight Search! 🛬</h1>
-        <GoogleApiWrapper flightInfo={this.state}/>
+        <div className="CoreAviationSearch">
+          <h1>🛫 Flight Search! 🛬</h1>
+        </div>
+        <div>
+          <div>
+            <AvationForm />
+          </div>
+          <div className="GoogleMapWrapper">
+            <GoogleApiWrapper flightInfo={this.state}/>
+          </div>
+        </div>
       </div>
     </main>
     );

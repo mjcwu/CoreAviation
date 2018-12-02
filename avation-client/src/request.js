@@ -5,6 +5,6 @@ const flightTrackerURL = `http://aviation-edge.com/v2/public/flights?key=${API_K
 
 export const Aviation = {
   flightSearch() {
-    return fetch (`${flightTrackerURL}${flightIATA}BR10`).then(res => res.json()).catch(error=>console.log(error))
+    return fetch (`${flightTrackerURL}${flightIATA}AC33`).then(res => res.json()).catch(error=>console.log(error))
   },
 };

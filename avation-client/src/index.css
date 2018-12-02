@@ -22,8 +22,7 @@ main {
 
 .NavBar {
   display: flex;
-
-  padding: 10px;
+  padding: 20px;
 }
 
 .NavBar > * {
@@ -40,4 +39,32 @@ main {
 
 .flightInfo {
   color: black;
+}
+
+.WelcomePage {
+  display:flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content:center;
+}
+
+.CoreAviationSearch{
+  display:flex;
+  /* flex-direction: row; */
+  text-align: center;
+  justify-content:center;
+}
+
+.AviationForm {
+  display:flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content:center;
+}
+
+.InputForm{
+  display:flex;
+  flex-direction: row;
+  text-align: center;
+  justify-content:center;
 }
