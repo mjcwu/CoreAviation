@@ -6,22 +6,40 @@ class CoreAviationSearch extends Component {
   constructor(props){
     super(props);
 
-    
+    this.state = {
+      longitude: null,
+      latitude: null,
+      direction: null,
+      departure: null,
+      arrival: null,
+      aircraftype: null,
+      airline: null,
+      flight: null
+    };
   }
 
   componentDidMount() {
-    // const id = this.props.match.params.id;
-    // Aviation.flightSearch().then(flightInfo => {
-    //   console.log(flightInfo)
-    // });
+    Aviation.flightSearch().then(flightInfo => {
+      this.setState({
+        longitude: flightInfo[0].geography.longitude,
+        latitude: flightInfo[0].geography.latitude,
+        direction: flightInfo[0].geography.direction,
+        departure: flightInfo[0].departure.iataCode,
+        arrival: flightInfo[0].arrival.iataCode,
+        aircraftype: flightInfo[0].aircraft.iataCode,
+        airline: flightInfo[0].airline.icaoCode,
+        flight: flightInfo[0].flight.iataNumber
+      })
+    });
   }
 
   render(){
     return(
     <main className="CoreAviationSearch">
-      <h1>🛫 Flight Search! 🛬</h1>
-
-      <GoogleApiWrapper />
+      <div>
+        <h1>🛫 Flight Search! 🛬</h1>
+        <GoogleApiWrapper flightInfo={this.state}/>
+      </div>
     </main>
     );
   }

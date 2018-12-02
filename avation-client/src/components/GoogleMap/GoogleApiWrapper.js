@@ -5,7 +5,11 @@ import B747Icon from './B747Icon'
 
 
 export class MapContainer extends Component {
-  
+  constructor(props){
+    super(props);
+    
+  }
+
   state = {
     showingInfoWindow: false,
     activeMarker: {},
@@ -77,6 +81,7 @@ export class MapContainer extends Component {
                   Airline: Air Canada <br/>
                   Departure: YVR <br/>
                   Arrival: SYD <br/>
+                  {this.props.flightInfo.flight}
                 </small>
               </p>
             </div>
