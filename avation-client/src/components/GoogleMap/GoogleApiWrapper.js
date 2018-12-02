@@ -46,7 +46,7 @@ export class MapContainer extends Component {
       fillColor: '#7B68EE',
       fillOpacity: 1,
       scale: 0.003,
-      rotation: rotate,
+      rotation: this.props.flightInfo.direction+180,
       anchor: new google.maps.Point(4666.66, 4666.66),
       strokeWeight: 0.5,
     }
@@ -67,7 +67,7 @@ export class MapContainer extends Component {
             google = {this.props.google}
             onClick = {this.onMarkerClick}
             name={'Your position'}
-            position={{lat: 49.1967, lng: -123.1815}}
+            position={{lat: this.props.flightInfo.latitude, lng:this.props.flightInfo.longitude}}
             icon={ icon } 
           />
           <InfoWindow
@@ -75,13 +75,12 @@ export class MapContainer extends Component {
           visible={this.state.showingInfoWindow}>
             <div className="flightInfo">
               <p>
-                  Flight: AC033 <br/>
+                  Flight: {this.props.flightInfo.flight} <br/>
                 <small>
-                  Model: 777-200 <br/>
-                  Airline: Air Canada <br/>
-                  Departure: YVR <br/>
-                  Arrival: SYD <br/>
-                  {this.props.flightInfo.flight}
+                  Type: {this.props.flightInfo.aircraftype} <br/>
+                  Airline: {this.props.flightInfo.airline} <br/>
+                  Departure: {this.props.flightInfo.departure} <br/>
+                  Arrival: {this.props.flightInfo.arrival} <br/>
                 </small>
               </p>
             </div>

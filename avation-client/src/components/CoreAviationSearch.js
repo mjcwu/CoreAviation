@@ -18,20 +18,20 @@ class CoreAviationSearch extends Component {
     };
   }
 
-  componentDidMount() {
-    Aviation.flightSearch().then(flightInfo => {
-      this.setState({
-        longitude: flightInfo[0].geography.longitude,
-        latitude: flightInfo[0].geography.latitude,
-        direction: flightInfo[0].geography.direction,
-        departure: flightInfo[0].departure.iataCode,
-        arrival: flightInfo[0].arrival.iataCode,
-        aircraftype: flightInfo[0].aircraft.iataCode,
-        airline: flightInfo[0].airline.icaoCode,
-        flight: flightInfo[0].flight.iataNumber
-      })
-    });
-  }
+  // componentDidMount() {
+  //   Aviation.flightSearch().then(flightInfo => {
+  //     this.setState({
+  //       longitude: flightInfo[0].geography.longitude,
+  //       latitude: flightInfo[0].geography.latitude,
+  //       direction: flightInfo[0].geography.direction,
+  //       departure: flightInfo[0].departure.iataCode,
+  //       arrival: flightInfo[0].arrival.iataCode,
+  //       aircraftype: flightInfo[0].aircraft.iataCode,
+  //       airline: flightInfo[0].airline.icaoCode,
+  //       flight: flightInfo[0].flight.iataNumber
+  //     })
+  //   });
+  // }
 
   render(){
     return(
