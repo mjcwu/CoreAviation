@@ -5,7 +5,6 @@ import B747Icon from './B747Icon'
 
 
 export class MapContainer extends Component {
-
   state = {
     showingInfoWindow: false,
     activeMarker: {},
@@ -28,20 +27,20 @@ export class MapContainer extends Component {
     }
   };
 
+  onMouseoverMarker(props, marker, e) {
+    marker.setState.fillColor="#FF0000";
+  }
+
   render() {
     const google = window.google
-    const style = {
-      // width: '1000px',
-      
-    }
     
     const icon = {
       path: B747Icon.path,
       // url: B747png,
       fillColor: '#808000',
       fillOpacity: 1,
-      scale: 0.003,
-      rotation: this.props.flightInfo.direction+180,
+      scale: 0.005,
+      rotation: this.props.flightInfo.direction-180,
       anchor: new google.maps.Point(4666.66, 4666.66),
       strokeWeight: 0.5,
     }
@@ -50,23 +49,22 @@ export class MapContainer extends Component {
       <div className="googleContent">
         <Map google={this.props.google}
           onClick={this.onMapClicked}
-          style={style}
           className={'map'}
-          zoom={14}
+          zoom={15}
           initialCenter={{
             lat: 49.1967,
             lng: -123.1815
           }}
           center={{
-            lat: this.props.flightInfo.latitude, lng:this.props.flightInfo.longitude
+            lat: this.props.flightInfo.latitude, lng:this.props.flightInfo.longitude,
           }}
           >
           <Marker
             google = {this.props.google}
             onClick = {this.onMarkerClick}
-            name={'Your position'}
             position={{lat: this.props.flightInfo.latitude, lng:this.props.flightInfo.longitude}}
-            icon={ icon } 
+            icon={ icon }
+            // onMouseover={this.onMouseoverMarker}
           />
           <InfoWindow
           marker={this.state.activeMarker}

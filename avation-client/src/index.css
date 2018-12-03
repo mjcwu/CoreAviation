@@ -97,5 +97,7 @@ main {
 }
 
 .flightInfo{
-  
+  font-weight: bold;
+  font-size: 150%;
+  margin: 0;
 }
