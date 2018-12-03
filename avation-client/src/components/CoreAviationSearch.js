@@ -24,6 +24,7 @@ class CoreAviationSearch extends Component {
 
   userInput(props){
     Aviation.flightSearch(props.flightNum).then(flightInfo => {
+      console.log(flightInfo[0].geography.longitude)
       this.setState({
         longitude: flightInfo[0].geography.longitude,
         latitude: flightInfo[0].geography.latitude,

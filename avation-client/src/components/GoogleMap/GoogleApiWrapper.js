@@ -5,6 +5,12 @@ import B747Icon from './B747Icon'
 
 
 export class MapContainer extends Component {
+  constructor(props) {
+    super(props);
+    this.onMapClicked = this.onMapClicked.bind(this);
+    this.onMarkerClick = this.onMarkerClick.bind(this);
+}
+
   state = {
     showingInfoWindow: false,
     activeMarker: {},
@@ -36,7 +42,6 @@ export class MapContainer extends Component {
     
     const icon = {
       path: B747Icon.path,
-      // url: B747png,
       fillColor: '#808000',
       fillOpacity: 1,
       scale: 0.005,
@@ -56,13 +61,16 @@ export class MapContainer extends Component {
             lng: -123.1815
           }}
           center={{
-            lat: this.props.flightInfo.latitude, lng:this.props.flightInfo.longitude,
+            lat: this.props.flightInfo.latitude, lng: this.props.flightInfo.longitude,
           }}
           >
           <Marker
             google = {this.props.google}
             onClick = {this.onMarkerClick}
-            position={{lat: this.props.flightInfo.latitude, lng:this.props.flightInfo.longitude}}
+            name={'Current location'}
+            position={{
+              lat: this.props.flightInfo.latitude, 
+              lng: this.props.flightInfo.longitude}}
             icon={ icon }
             // onMouseover={this.onMouseoverMarker}
           />
