@@ -41,21 +41,22 @@ class CoreAviationSearch extends Component {
     return(
     <main>
       <div className="CoreAviationSearch">
-        <div className="search header">
+        <div className="search-header">
           <h1>🛫 Flight Search! 🛬</h1>
         </div>
-        <div className="search main">
+        <div className="search-main">
           <div className="GoogleMapWrapper">
-            <GoogleApiWrapper flightInfo={this.state}/>
+            <GoogleApiWrapper 
+            flightInfo={this.state}
+            />
           </div>   
         </div>
-        <div className="search div-1">
+        <div className="search-div-1">
           <div className="AviationInput">
             <AviationInput onSubmit={this.userInput}/>
           </div>
         </div>
-        <div className="search div-2">div 2</div>
-        <div className="search footer">footer</div>
+        
       </div>
     </main>
     );

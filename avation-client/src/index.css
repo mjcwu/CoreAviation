@@ -79,6 +79,9 @@ main {
   display: flex;  
   flex-flow: row wrap;
   font-weight: bold;
+}
+
+.search-header{
   text-align: center;
 }
 
@@ -87,15 +90,12 @@ main {
   flex: 1 100%;
 }
 
-.main {
-  text-align: left;
-  justify-content:center;
+@media all and (min-width: 800px) {
+  .search-main    { flex: 3 0px; }
+  .search-div-1 { order: 1; } 
+  .search-main    { order: 2; }
 }
 
-@media all and (min-width: 800px) {
-  .main    { flex: 3 0px; }
-  .div-1 { order: 1; } 
-  .main    { order: 2; }
-  .div-2 { order: 3; }
-  .footer  { order: 4; }
+.flightInfo{
+  
 }

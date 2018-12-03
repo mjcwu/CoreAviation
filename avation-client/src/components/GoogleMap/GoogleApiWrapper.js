@@ -31,8 +31,8 @@ export class MapContainer extends Component {
   render() {
     const google = window.google
     const style = {
-      width: '800px',
-      height: '500px',
+      // width: '1000px',
+      
     }
     
     const icon = {
@@ -47,15 +47,18 @@ export class MapContainer extends Component {
     }
 
     return (
-      <div>
+      <div className="googleContent">
         <Map google={this.props.google}
           onClick={this.onMapClicked}
           style={style}
           className={'map'}
-          zoom={13}
+          zoom={14}
           initialCenter={{
             lat: 49.1967,
             lng: -123.1815
+          }}
+          center={{
+            lat: this.props.flightInfo.latitude, lng:this.props.flightInfo.longitude
           }}
           >
           <Marker
