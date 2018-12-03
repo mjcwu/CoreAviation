@@ -7,8 +7,21 @@ import B747Icon from './B747Icon'
 export class MapContainer extends Component {
   constructor(props) {
     super(props);
+    const google = window.google
+    this.state={
+      path: B747Icon.path,
+      fillColor: '#808000',
+      fillOpacity: 1,
+      scale: 0.004,
+      rotation: this.props.flightInfo.direction-180,
+      anchor: new google.maps.Point(4666.66, 4666.66),
+      strokeWeight: 0.5,
+    }
+
     this.onMapClicked = this.onMapClicked.bind(this);
     this.onMarkerClick = this.onMarkerClick.bind(this);
+    // this.onMouseover = this.onMouseover.bind(this);
+    // this.onMouseout = this.onMouseout.bind(this);
 }
 
   state = {
@@ -21,47 +34,68 @@ export class MapContainer extends Component {
   this.setState({
     selectedPlace: props,
     activeMarker: marker,
-    showingInfoWindow: true
+    showingInfoWindow: true,
+    fillColor: "#B22222"
   });
   
   onMapClicked = (props) => {
     if (this.state.showingInfoWindow) {
       this.setState({
         showingInfoWindow: false,
-        activeMarker: null
+        activeMarker: null,
+        fillColor: '#808000',
       })
     }
   };
 
-  onMouseoverMarker(props, marker, e) {
-    marker.setState.fillColor="#FF0000";
-  }
 
+  // onMouseover(props, marker, e) {
+  //   this.setState({
+  //     selectedPlace: props,
+  //     activeMarker: marker,
+  //     showingInfoWindow: true,
+  //     fillColor: "#B22222"
+  // });
+  // }
+
+  // onMouseout(props, marker, e) {
+  //   if (this.state.showingInfoWindow) {
+    //   this.setState({
+    //     showingInfoWindow: false,
+    //     activeMarker: null,
+    //     fillColor: '#808000',
+    //   })
+    // }
+  // }
+      
   render() {
     const google = window.google
     
     const icon = {
       path: B747Icon.path,
-      fillColor: '#808000',
+      fillColor: this.state.showingInfoWindow? '#B22222':"#808000",
       fillOpacity: 1,
-      scale: 0.005,
+      scale: 0.004,
       rotation: this.props.flightInfo.direction-180,
       anchor: new google.maps.Point(4666.66, 4666.66),
       strokeWeight: 0.5,
     }
-
+    
+    
     return (
       <div className="googleContent">
+        
         <Map google={this.props.google}
           onClick={this.onMapClicked}
           className={'map'}
-          zoom={15}
+          zoom={10}
           initialCenter={{
             lat: 49.1967,
             lng: -123.1815
           }}
           center={{
-            lat: this.props.flightInfo.latitude, lng: this.props.flightInfo.longitude,
+            lat: this.props.flightInfo.latitude, 
+            lng: this.props.flightInfo.longitude,
           }}
           >
           <Marker
@@ -71,9 +105,15 @@ export class MapContainer extends Component {
             position={{
               lat: this.props.flightInfo.latitude, 
               lng: this.props.flightInfo.longitude}}
+
+            // ================
+            // position={{
+            //   lat: 49.1967,
+            //   lng: -123.1815}}
+            // ====================
             icon={ icon }
-            // onMouseover={this.onMouseoverMarker}
-          />
+            // onMouseover={this.onMouseover}
+            />
           <InfoWindow
           marker={this.state.activeMarker}
           visible={this.state.showingInfoWindow}>
