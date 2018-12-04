@@ -1,4 +1,4 @@
-import {Map, InfoWindow, Marker, GoogleApiWrapper} from 'google-maps-react';
+import {Map, InfoWindow, Marker, GoogleApiWrapper, Polyline} from 'google-maps-react';
 import React, {Component} from 'react';
 import API_Key from '../api_key'
 import B747Icon from './B747Icon'
@@ -7,20 +7,14 @@ import B747Icon from './B747Icon'
 export class MapContainer extends Component {
   constructor(props) {
     super(props);
-    const google = window.google
-    this.state={
-      path: B747Icon.path,
-      fillColor: '#808000',
-      fillOpacity: 1,
-      scale: 0.004,
-      rotation: this.props.flightInfo.direction-180,
-      anchor: new google.maps.Point(4666.66, 4666.66),
-      strokeWeight: 0.5,
+    
+    this.state = {
+      combineCoord:[ ]
     }
 
     this.onMapClicked = this.onMapClicked.bind(this);
     this.onMarkerClick = this.onMarkerClick.bind(this);
-    // this.onMouseover = this.onMouseover.bind(this);
+    // this.onMouseoverMarker = this.onMouseoverMarker.bind(this);
     // this.onMouseout = this.onMouseout.bind(this);
 }
 
@@ -35,7 +29,6 @@ export class MapContainer extends Component {
     selectedPlace: props,
     activeMarker: marker,
     showingInfoWindow: true,
-    fillColor: "#B22222"
   });
   
   onMapClicked = (props) => {
@@ -43,13 +36,12 @@ export class MapContainer extends Component {
       this.setState({
         showingInfoWindow: false,
         activeMarker: null,
-        fillColor: '#808000',
       })
     }
   };
 
 
-  // onMouseover(props, marker, e) {
+  // onMouseoverMarker(props, marker, e) {
   //   this.setState({
   //     selectedPlace: props,
   //     activeMarker: marker,
@@ -80,11 +72,18 @@ export class MapContainer extends Component {
       anchor: new google.maps.Point(4666.66, 4666.66),
       strokeWeight: 0.5,
     }
-    
-    
+
+    if(this.props.flightInfo.latitude!==null){
+      const currentCoord = { 
+        lat: this.props.flightInfo.latitude, 
+        lng: this.props.flightInfo.longitude 
+      }
+      this.state.combineCoord.push(currentCoord)
+      console.log(this.state.combineCoord)
+    }
+        
     return (
       <div className="googleContent">
-        
         <Map google={this.props.google}
           onClick={this.onMapClicked}
           className={'map'}
@@ -98,6 +97,8 @@ export class MapContainer extends Component {
             lng: this.props.flightInfo.longitude,
           }}
           >
+          
+          { this.props.flightInfo.latitude? 
           <Marker
             google = {this.props.google}
             onClick = {this.onMarkerClick}
@@ -105,15 +106,21 @@ export class MapContainer extends Component {
             position={{
               lat: this.props.flightInfo.latitude, 
               lng: this.props.flightInfo.longitude}}
+              // ======== no api calling testing ========
+              // position={{
+                //   lat: 49.1967,
+                //   lng: -123.1815}}
+                // ======== no api calling testing ========
+                icon={ icon }
+                // onMouseover={this.onMouseoverMarker}
+                />: ''}
+            {/* /> */}
+          <Polyline
+            path={this.state.combineCoord}
+            strokeColor="#0000FF"
+            strokeOpacity={0.8}
+            strokeWeight={5} />
 
-            // ================
-            // position={{
-            //   lat: 49.1967,
-            //   lng: -123.1815}}
-            // ====================
-            icon={ icon }
-            // onMouseover={this.onMouseover}
-            />
           <InfoWindow
           marker={this.state.activeMarker}
           visible={this.state.showingInfoWindow}>
