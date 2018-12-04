@@ -18,8 +18,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon index.js",
-    "db:create": "createdb -e express_demo",
-    "db:drop": "dropdb -e express_demo"
+    "db:create": "createdb -e coreAviation",
+    "db:drop": "dropdb -e coreAviation"
   },
   "author": "Mike Wu",
   "license": "ISC"

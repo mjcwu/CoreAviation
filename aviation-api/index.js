@@ -34,14 +34,14 @@ const flightIATA = `flightIata=`;
 
 function fetchMachine()
 {
-  fetchingData()
+  fetchingData();
   setTimeout(fetchMachine, 60000);
 }
 
 async function fetchingData() {
-  console.log(`${flightTrackerURL}${flightIATA}AC007`)
+  console.log(`${flightTrackerURL}${flightIATA}AC007`);
   const searchFlight = await fetch (`${flightTrackerURL}${flightIATA}ac7`).then(res => res.json()).catch(error=>console.log(error));
-  console.log(searchFlight)
+  console.log(searchFlight);
 }
 
 fetchMachine();
