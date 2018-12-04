@@ -1,8 +1,8 @@
 import {Map, InfoWindow, Marker, GoogleApiWrapper, Polyline} from 'google-maps-react';
 import React, {Component} from 'react';
-import API_Key from '../api_key'
-import B747Icon from './B747Icon'
-
+import API_Key from '../api_key';
+import B747Icon from './B747Icon';
+import { Aviation } from "../../request";
 
 export class MapContainer extends Component {
   constructor(props) {

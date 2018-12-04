@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import GoogleApiWrapper from "./GoogleMap/GoogleApiWrapper"
 import { Aviation } from "../request";
-import AviationInput from "./AviationInput"
+import AviationInput from "./AviationInput";
 
 class CoreAviationSearch extends Component {
   constructor(props){
