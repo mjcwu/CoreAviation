@@ -14,14 +14,14 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 
 
-// app.get("/hello_world", (request, response) => {
-//   response.send("<h1>Hello World!</h1>");
-// });
+app.get("/hello_world", (request, response) => {
+  response.send("<h1>Hello World!</h1>");
+});
 
-// const PORT = 5000;
-// app.listen(PORT, () => {
-//   console.log(`Server is running ð¤ on http://localhost:${PORT}`);
-// });
+const PORT = 5000;
+app.listen(PORT, () => {
+  console.log(`Server is running ð¤ on http://localhost:${PORT}`);
+});
 
 
 
