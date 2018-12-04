@@ -7,9 +7,9 @@ import B747Icon from './B747Icon'
 export class MapContainer extends Component {
   constructor(props) {
     super(props);
-    
+
     this.state = {
-      combineCoord:[ ]
+      combineCoord: []
     }
 
     this.onMapClicked = this.onMapClicked.bind(this);
@@ -29,7 +29,13 @@ export class MapContainer extends Component {
     selectedPlace: props,
     activeMarker: marker,
     showingInfoWindow: true,
+    combineCoord: this.state.combineCoord.concat([{
+      lat: this.props.flightInfo.latitude, 
+      lng: this.props.flightInfo.longitude
+    }])
+    
   });
+  
   
   onMapClicked = (props) => {
     if (this.state.showingInfoWindow) {
@@ -72,22 +78,13 @@ export class MapContainer extends Component {
       anchor: new google.maps.Point(4666.66, 4666.66),
       strokeWeight: 0.5,
     }
-
-    if(this.props.flightInfo.latitude!==null){
-      const currentCoord = { 
-        lat: this.props.flightInfo.latitude, 
-        lng: this.props.flightInfo.longitude 
-      }
-      this.state.combineCoord.push(currentCoord)
-      console.log(this.state.combineCoord)
-    }
         
     return (
       <div className="googleContent">
         <Map google={this.props.google}
           onClick={this.onMapClicked}
           className={'map'}
-          zoom={10}
+          zoom={9}
           initialCenter={{
             lat: 49.1967,
             lng: -123.1815
@@ -111,16 +108,17 @@ export class MapContainer extends Component {
                 //   lat: 49.1967,
                 //   lng: -123.1815}}
                 // ======== no api calling testing ========
-                icon={ icon }
-                // onMouseover={this.onMouseoverMarker}
-                />: ''}
-            {/* /> */}
+            icon={ icon }
+            // onMouseover={this.onMouseoverMarker}
+          />: ''}
+              {console.log(this.state.combineCoord)}
+          {/* { this.state.combineCoord? 
           <Polyline
             path={this.state.combineCoord}
             strokeColor="#0000FF"
             strokeOpacity={0.8}
-            strokeWeight={5} />
-
+            strokeWeight={5} />: ''} */}
+        
           <InfoWindow
           marker={this.state.activeMarker}
           visible={this.state.showingInfoWindow}>
