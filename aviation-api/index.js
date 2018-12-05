@@ -14,6 +14,15 @@ app.use(morgan('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
+// ---- routes ----
+const coreAviation = require("./routes/coreAviation");
+app.use("/", coreAviation);
+
+// ---- connect to react ----
+app.get('/express_backend', (req, res) => {
+  res.send({ express: 'YOUR EXPRESS BACKEND IS CONNECTED TO REACT' });
+});
+
 // app.get('/api/hello', (req, res) => {
 //   res.send({ express: 'Hello From Express' });
 // });
@@ -24,6 +33,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 //   );
 // });
 
+
+const knex = require("./db/client");
 // ------ flight data ------
 const api_key = require('./private/api_key');
 const API_KEY = api_key.aviationEdgeAPI;
@@ -39,13 +50,22 @@ function fetchMachine()
 }
 
 async function fetchingData() {
-  console.log(`${flightTrackerURL}${flightIATA}AC007`);
-  const searchFlight = await fetch (`${flightTrackerURL}${flightIATA}ac7`).then(res => res.json()).catch(error=>console.log(error));
-  console.log(searchFlight);
+  console.log(`fetching AC007`);
+  let flightDataObtained = await fetch (`${flightTrackerURL}${flightIATA}ac7`).then(res => res.json()).catch(error=>console.log(error));
+  console.log(JSON.stringify(flightDataObtained[0]));
+
+  knex.table('aircraft')
+    .insert({
+      id: 2,    
+      json_data: JSON.stringify(flightDataObtained[0])
+    })
+  
+  if(flightDataObtained){
+    console.log("---- Data Received ----");
+  }
 }
 
 fetchMachine();
-
 // ------ flight data ------
 
 
