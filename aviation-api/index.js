@@ -1,12 +1,13 @@
 const express = require('express');
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
-const path = require("path");
+// const path = require("path");
+const http = require('http');
 // const cookieParser = require("cookie-parser");
 // const methodOverride = require("method-override");
 const app = express();
-
 const fetch = require('node-fetch');
+
 app.set("view engine", "ejs");
 app.use(morgan('dev'));
 // app.use(cookieParser())
@@ -33,44 +34,61 @@ app.get('/express_backend', (req, res) => {
 //   );
 // });
 
-
-const knex = require("./db/client");
-// ------ flight data ------
+// ----------- fetching machine -----------
 const api_key = require('./private/api_key');
 const API_KEY = api_key.aviationEdgeAPI;
 const flightTrackerURL = `http://aviation-edge.com/v2/public/flights?key=${API_KEY}&`;
-
-const flightNum = `flightNum=`;
 const flightIATA = `flightIata=`;
 
-function fetchMachine()
-{
-  fetchingData();
-  setTimeout(fetchMachine, 60000);
-}
+app.get(`${flightTrackerURL}${flightIATA}ac7`,  (req, res) => {
 
-async function fetchingData() {
-  console.log(`fetching AC007`);
-  let flightDataObtained = await fetch (`${flightTrackerURL}${flightIATA}ac7`).then(res => res.json()).catch(error=>console.log(error));
-  console.log(JSON.stringify(flightDataObtained[0]));
+  http.get(`${flightTrackerURL}${flightIATA}ac7`, (resp) => {
+      let flightDataObtained = '';
 
-  knex.table('aircraft')
-    .insert({
-      id: 2,    
-      json_data: JSON.stringify(flightDataObtained[0])
-    })
-  
-  if(flightDataObtained){
-    console.log("---- Data Received ----");
-  }
-}
+      // Once the response has finished, do something with the result
+      resp.on('end', () => {
+        knex("aircraft")
+          .insert({
+            data: JSON.stringify(flightDataObtained)
+          })
+      }); 
 
-fetchMachine();
-// ------ flight data ------
+      // If an error occured, return the error to the user
+    }).on("error", (err) => {
+      res.json("Error: " + err.message);
+    });
+});
 
 
-// const PORT = 5000;
-// app.listen(PORT, () => {
-//   console.log(`Server is running ð¤ on http://localhost:${PORT}`);
-// });
+// // ------ flight data ------
+// const api_key = require('../private/api_key');
+// const API_KEY = api_key.aviationEdgeAPI;
+// const flightTrackerURL = `http://aviation-edge.com/v2/public/flights?key=${API_KEY}&`;
 
+// const flightNum = `flightNum=`;
+// const flightIATA = `flightIata=`;
+
+// function fetchMachine()
+// {
+//   fetchingData();
+//   setTimeout(fetchMachine, 60000);
+// }
+
+// async function fetchingData() {
+//   console.log(`fetching AC007`);
+//   let flightDataObtained = await fetch (`${flightTrackerURL}${flightIATA}ac7`).then(res => res.json()).catch(error=>console.log(error));
+//   console.log(JSON.stringify(flightDataObtained[0]));
+
+//   if(flightDataObtained){
+//     console.log("---- Data Received ----");
+//   }
+// }
+
+// fetchMachine();
+// // ------ flight data ------
+
+
+const PORT = 5000;
+app.listen(PORT, () => {
+  console.log(`Server is running ð¤ on http://localhost:${PORT}`);
+});
