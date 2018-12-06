@@ -34,32 +34,6 @@ app.get('/express_backend', (req, res) => {
 //   );
 // });
 
-// ----------- fetching machine -----------
-const api_key = require('./private/api_key');
-const API_KEY = api_key.aviationEdgeAPI;
-const flightTrackerURL = `http://aviation-edge.com/v2/public/flights?key=${API_KEY}&`;
-const flightIATA = `flightIata=`;
-
-app.get(`${flightTrackerURL}${flightIATA}ac7`,  (req, res) => {
-
-  http.get(`${flightTrackerURL}${flightIATA}ac7`, (resp) => {
-      let flightDataObtained = '';
-
-      // Once the response has finished, do something with the result
-      resp.on('end', () => {
-        knex("aircraft")
-          .insert({
-            data: JSON.stringify(flightDataObtained)
-          })
-      }); 
-
-      // If an error occured, return the error to the user
-    }).on("error", (err) => {
-      res.json("Error: " + err.message);
-    });
-});
-
-
 // // ------ flight data ------
 // const api_key = require('../private/api_key');
 // const API_KEY = api_key.aviationEdgeAPI;

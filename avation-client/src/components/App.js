@@ -4,12 +4,14 @@ import './App.css';
 import NavBar from "./NavBar";
 import WelcomePage from "./WelcomePage";
 import CoreAviationSearch from "./CoreAviationSearch";
+// import SideBar from './SideBar';
 
 class App extends Component {
   render(){
     return (
       <BrowserRouter>
         <div className="App">
+          {/* <SideBar /> */}
           <NavBar/>
           <Switch>
             <Route path="/" exact component={WelcomePage}/>

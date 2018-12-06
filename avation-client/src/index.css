@@ -23,6 +23,8 @@ main {
   display: flex;
   padding: 20px;
   background-color: black;
+  vertical-align: middle;
+  line-height: 30px;
 }
 
 .NavBar > * {
@@ -70,7 +72,7 @@ main {
   
 }
 
-.aircraftRegi{
+.aircraftReg{
   margin-left: 5px;
 }
 
@@ -97,7 +99,10 @@ main {
 }
 
 .flightInfo{
-  font-weight: bold;
-  font-size: 150%;
+  font-size: 120%;
   margin: 0;
+}
+
+.flightinfoHeader{
+  font-weight: bold;
 }

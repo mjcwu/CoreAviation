@@ -9,7 +9,7 @@ const AviationInput = props => {
 
     props.onSubmit({
       flightNum: formData.get("flightNum"),
-      aircraftRegi: formData.get("aircraftRegi")
+      aircraftReg: formData.get("aircraftReg")
     });
 
     currentTarget.reset();
@@ -22,9 +22,9 @@ const AviationInput = props => {
           <label htmlFor="flightNum">Flight Num.</label> <br />
           <input name="flightNum" id="flightNum" />
         </div>
-        <div className="aircraftRegi">
-          <label htmlFor="aircraftRegi">Aircraft Regi.</label> <br />
-          <input name="aircraftRegi" id="aircraftRegi" cols="60" rows="4" />
+        <div className="aircraftReg">
+          <label htmlFor="aircraftReg">Aircraft Reg.</label> <br />
+          <input name="aircraftReg" id="aircraftReg" cols="60" rows="4" />
         </div>
       </div>
       

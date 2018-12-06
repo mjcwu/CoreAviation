@@ -2,6 +2,7 @@ import {Map, InfoWindow, Marker, GoogleApiWrapper, Polyline} from 'google-maps-r
 import React, {Component} from 'react';
 import API_Key from '../api_key';
 import B747Icon from './B747Icon';
+import B747Pic from '../images/B747.JPG';
 import { Aviation } from "../../request";
 
 export class MapContainer extends Component {
@@ -29,15 +30,15 @@ export class MapContainer extends Component {
     selectedPlace: props,
     activeMarker: marker,
     showingInfoWindow: true,
-    combineCoord: this.state.combineCoord.concat([{
-      lat: this.props.flightInfo.latitude, 
-      lng: this.props.flightInfo.longitude
-    }])
+    // combineCoord: this.state.combineCoord.concat([{
+    //   lat: this.props.flightInfo.latitude, 
+    //   lng: this.props.flightInfo.longitude
+    // }])
     
   });
   
   
-  onMapClicked = (props) => {
+  onMapClicked = () => {
     if (this.state.showingInfoWindow) {
       this.setState({
         showingInfoWindow: false,
@@ -45,7 +46,6 @@ export class MapContainer extends Component {
       })
     }
   };
-
 
   // onMouseoverMarker(props, marker, e) {
   //   this.setState({
@@ -71,7 +71,7 @@ export class MapContainer extends Component {
     
     const icon = {
       path: B747Icon.path,
-      fillColor: this.state.showingInfoWindow? '#B22222':"#808000",
+      fillColor: this.state.showingInfoWindow? '#B22222':"#FF00FF",
       fillOpacity: 1,
       scale: 0.004,
       rotation: this.props.flightInfo.direction-180,
@@ -103,15 +103,11 @@ export class MapContainer extends Component {
             position={{
               lat: this.props.flightInfo.latitude, 
               lng: this.props.flightInfo.longitude}}
-              // ======== no api calling testing ========
-              // position={{
-                //   lat: 49.1967,
-                //   lng: -123.1815}}
-                // ======== no api calling testing ========
+              
             icon={ icon }
             // onMouseover={this.onMouseoverMarker}
           />: ''}
-              {console.log(this.state.combineCoord)}
+          {/* {console.log(this.state.combineCoord)} */}
           {/* { this.state.combineCoord? 
           <Polyline
             path={this.state.combineCoord}
@@ -124,13 +120,19 @@ export class MapContainer extends Component {
           visible={this.state.showingInfoWindow}>
             <div className="flightInfo">
               <p>
+                <div className="flightinfoHeader">
                   Flight: {this.props.flightInfo.flight} <br/>
+                </div>
                 <small>
                   Type: {this.props.flightInfo.aircraftype} <br/>
                   Airline: {this.props.flightInfo.airline} <br/>
                   Departure: {this.props.flightInfo.departure} <br/>
                   Arrival: {this.props.flightInfo.arrival} <br/>
+                  Speed: {this.props.flightInfo.speed} km/hr <br/>
                 </small>
+                <div className="flightInfoPic">
+                  {this.pickPic(this.props.flightInfo.aircraftype)}
+                </div>
               </p>
             </div>
           </InfoWindow>

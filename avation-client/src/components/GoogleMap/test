@@ -1,0 +1,1808 @@
+[
+
+{
+
+
+"nameAirport": "Vancouver International",
+
+
+"codeIataAirport": "YVR",
+
+
+"codeIcaoAirport": "CYVR",
+
+
+"nameTranslations": "Vancouver international ,Vancouver International,Vancouver Intl,Vancouver Intl,Vancouver Intl,????????,?????????????????????????,International,?????",
+
+
+"latitudeAirport": "49.1947",
+
+
+"longitudeAirport": "-123.17919",
+
+
+"timezone": "America/Vancouver",
+
+
+"GMT": "-8",
+
+
+"phone": "604-207-7077",
+
+
+"nameCountry": "Canada",
+
+
+"codeIso2Country": "CA",
+
+
+"codeIataCity": "YVR",
+
+
+"distance": "0.27901820244630504"
+
+},
+
+{
+
+
+"nameAirport": "Boundary Bay",
+
+
+"codeIataAirport": "YDT",
+
+
+"codeIcaoAirport": "CZBB",
+
+
+"nameTranslations": "Boundary Bay,Boundary Bay Havaliman?,????????",
+
+
+"latitudeAirport": "49.183334",
+
+
+"longitudeAirport": "-123.183334",
+
+
+"timezone": "America/Vancouver",
+
+
+"GMT": "-8",
+
+
+"phone": "",
+
+
+"nameCountry": "Canada",
+
+
+"codeIso2Country": "CA",
+
+
+"codeIataCity": "YVR",
+
+
+"distance": "1.4943034054542987"
+
+},
+
+{
+
+
+"nameAirport": "Vancouver Railway.",
+
+
+"codeIataAirport": "XEA",
+
+
+"codeIcaoAirport": "",
+
+
+"nameTranslations": "Vancouver Railway.",
+
+
+"latitudeAirport": "49.261226",
+
+
+"longitudeAirport": "-123.1139268",
+
+
+"timezone": "America/Vancouver",
+
+
+"GMT": "-8",
+
+
+"phone": "",
+
+
+"nameCountry": "Canada",
+
+
+"codeIso2Country": "CA",
+
+
+"codeIataCity": "YVR",
+
+
+"distance": "8.704615992880806"
+
+},
+
+{
+
+
+"nameAirport": "Coal Harbour",
+
+
+"codeIataAirport": "CXH",
+
+
+"codeIcaoAirport": "CYHC",
+
+
+"nameTranslations": "Vancouver Coal Harbour,Coal Harbour,?????????? ??? ???????,Coal Harbour",
+
+
+"latitudeAirport": "49.266666",
+
+
+"longitudeAirport": "-123.11667",
+
+
+"timezone": "America/Vancouver",
+
+
+"GMT": "-8",
+
+
+"phone": "",
+
+
+"nameCountry": "Canada",
+
+
+"codeIso2Country": "CA",
+
+
+"codeIataCity": "YVR",
+
+
+"distance": "9.1059917383041"
+
+},
+
+{
+
+
+"nameAirport": "New Westminster",
+
+
+"codeIataAirport": "YBD",
+
+
+"codeIcaoAirport": "",
+
+
+"nameTranslations": "New Westminster,????????",
+
+
+"latitudeAirport": "49.216667",
+
+
+"longitudeAirport": "-122.9",
+
+
+"timezone": "America/Vancouver",
+
+
+"GMT": "-8",
+
+
+"phone": "",
+
+
+"nameCountry": "Canada",
+
+
+"codeIso2Country": "CA",
+
+
+"codeIataCity": "YBD",
+
+
+"distance": "20.599413076509343"
+
+},
+
+{
+
+
+"nameAirport": "Miners Bay",
+
+
+"codeIataAirport": "YAV",
+
+
+"codeIcaoAirport": "CYAV",
+
+
+"nameTranslations": "Miners Bay,?????",
+
+
+"latitudeAirport": "48.86667",
+
+
+"longitudeAirport": "-123.3",
+
+
+"timezone": "America/Vancouver",
+
+
+"GMT": "-8",
+
+
+"phone": "",
+
+
+"nameCountry": "Canada",
+
+
+"codeIso2Country": "CA",
+
+
+"codeIataCity": "YAV",
+
+
+"distance": "37.75407803864395"
+
+},
+
+{
+
+
+"nameAirport": "Silva Bay",
+
+
+"codeIataAirport": "SYF",
+
+
+"codeIcaoAirport": "",
+
+
+"nameTranslations": "Silva Bay",
+
+
+"latitudeAirport": "49.15",
+
+
+"longitudeAirport": "-123.69722",
+
+
+"timezone": "America/Vancouver",
+
+
+"GMT": "-8",
+
+
+"phone": "",
+
+
+"nameCountry": "Canada",
+
+
+"codeIso2Country": "CA",
+
+
+"codeIataCity": "SYF",
+
+
+"distance": "37.90218944903747"
+
+},
+
+{
+
+
+"nameAirport": "Langley Regional",
+
+
+"codeIataAirport": "YLY",
+
+
+"codeIcaoAirport": "",
+
+
+"nameTranslations": "Langley Regional,Langley Yerel Havaliman?,??????",
+
+
+"latitudeAirport": "49.100834",
+
+
+"longitudeAirport": "-122.63084",
+
+
+"timezone": "America/Vancouver",
+
+
+"GMT": "-8",
+
+
+"phone": "",
+
+
+"nameCountry": "Canada",
+
+
+"codeIso2Country": "CA",
+
+
+"codeIataCity": "YLY",
+
+
+"distance": "41.50352836146862"
+
+},
+
+{
+
+
+"nameAirport": "Telegraph Harbour",
+
+
+"codeIataAirport": "YBQ",
+
+
+"codeIcaoAirport": "",
+
+
+"nameTranslations": "Telegraph Harbour,????????",
+
+
+"latitudeAirport": "48.983334",
+
+
+"longitudeAirport": "-123.65",
+
+
+"timezone": "America/Vancouver",
+
+
+"GMT": "-8",
+
+
+"phone": "",
+
+
+"nameCountry": "Canada",
+
+
+"codeIso2Country": "CA",
+
+
+"codeIataCity": "YBQ",
+
+
+"distance": "41.61276957100695"
+
+},
+
+{
+
+
+"nameAirport": "Montagne Harbor",
+
+
+"codeIataAirport": "YMF",
+
+
+"codeIcaoAirport": "",
+
+
+"nameTranslations": "Montagne Harbor,Montagne Harbor,Montagne Harbor,Montagne Harbor,Montagne Harbor,??????",
+
+
+"latitudeAirport": "48.816666",
+
+
+"longitudeAirport": "-123.2",
+
+
+"timezone": "America/Vancouver",
+
+
+"GMT": "-8",
+
+
+"phone": "",
+
+
+"nameCountry": "Canada",
+
+
+"codeIso2Country": "CA",
+
+
+"codeIataCity": "YMF",
+
+
+"distance": "42.339117836751214"
+
+},
+
+{
+
+
+"nameAirport": "Lyall Harbour",
+
+
+"codeIataAirport": "YAJ",
+
+
+"codeIcaoAirport": "",
+
+
+"nameTranslations": "Lyall Harbour,??????",
+
+
+"latitudeAirport": "48.8",
+
+
+"longitudeAirport": "-123.2",
+
+
+"timezone": "America/Vancouver",
+
+
+"GMT": "-8",
+
+
+"phone": "",
+
+
+"nameCountry": "Canada",
+
+
+"codeIso2Country": "CA",
+
+
+"codeIataCity": "YAJ",
+
+
+"distance": "44.19401151892046"
+
+},
+
+{
+
+
+"nameAirport": "Ganges Harbor",
+
+
+"codeIataAirport": "YGG",
+
+
+"codeIcaoAirport": "",
+
+
+"nameTranslations": "Ganges Harbor,Ganges Harbor,Ganges Harbor,Ganges Harbor,Ganges Harbor",
+
+
+"latitudeAirport": "48.85",
+
+
+"longitudeAirport": "-123.5",
+
+
+"timezone": "America/Vancouver",
+
+
+"GMT": "-8",
+
+
+"phone": "",
+
+
+"nameCountry": "Canada",
+
+
+"codeIso2Country": "CA",
+
+
+"codeIataCity": "YGG",
+
+
+"distance": "45.069555801485556"
+
+},
+
+{
+
+
+"nameAirport": "Springbank",
+
+
+"codeIataAirport": "YBW",
+
+
+"codeIcaoAirport": "CYBW",
+
+
+"nameTranslations": "Bedwell Harbor,Springbank,Bedwell Harbor,Bedwell Harbor,Bedwell Harbor,Bedwell Harbor Havaliman?",
+
+
+"latitudeAirport": "48.75",
+
+
+"longitudeAirport": "-123.23333",
+
+
+"timezone": "America/Vancouver",
+
+
+"GMT": "-8",
+
+
+"phone": "",
+
+
+"nameCountry": "Canada",
+
+
+"codeIso2Country": "CA",
+
+
+"codeIataCity": "YBW",
+
+
+"distance": "49.88499527368463"
+
+},
+
+{
+
+
+"nameAirport": "Sechelt",
+
+
+"codeIataAirport": "YHS",
+
+
+"codeIcaoAirport": "CAP3",
+
+
+"nameTranslations": "Sechelt,Sechelt,Sechelt Havaliman?,??????",
+
+
+"latitudeAirport": "49.466667",
+
+
+"longitudeAirport": "-123.75",
+
+
+"timezone": "America/Vancouver",
+
+
+"GMT": "-8",
+
+
+"phone": "",
+
+
+"nameCountry": "Canada",
+
+
+"codeIso2Country": "CA",
+
+
+"codeIataCity": "YHS",
+
+
+"distance": "51.04434087380821"
+
+},
+
+{
+
+
+"nameAirport": "Nanaimo",
+
+
+"codeIataAirport": "YCD",
+
+
+"codeIcaoAirport": "CYCD",
+
+
+"nameTranslations": "Nanaimo,Nanaimo,Nanaimo Arpt,Nanaimo Arpt,Nanaimo Arpt,?????????????,Cassidy Airport",
+
+
+"latitudeAirport": "49.05",
+
+
+"longitudeAirport": "-123.86667",
+
+
+"timezone": "America/Vancouver",
+
+
+"GMT": "-8",
+
+
+"phone": "",
+
+
+"nameCountry": "Canada",
+
+
+"codeIso2Country": "CA",
+
+
+"codeIataCity": "YCD",
+
+
+"distance": "52.534011991280025"
+
+},
+
+{
+
+
+"nameAirport": "Maple Bay",
+
+
+"codeIataAirport": "YAQ",
+
+
+"codeIcaoAirport": "",
+
+
+"nameTranslations": "Maple Bay,?????",
+
+
+"latitudeAirport": "48.816666",
+
+
+"longitudeAirport": "-123.61667",
+
+
+"timezone": "America/Vancouver",
+
+
+"GMT": "-8",
+
+
+"phone": "",
+
+
+"nameCountry": "Canada",
+
+
+"codeIso2Country": "CA",
+
+
+"codeIataCity": "YAQ",
+
+
+"distance": "52.925705223681035"
+
+},
+
+{
+
+
+"nameAirport": "Nanaimo Harbour",
+
+
+"codeIataAirport": "ZNA",
+
+
+"codeIcaoAirport": "CAC8",
+
+
+"nameTranslations": "Harbour,Nanaimo Harbour,Harbour,Harbour,Harbour,Harbour Airport",
+
+
+"latitudeAirport": "49.05293",
+
+
+"longitudeAirport": "-123.87485",
+
+
+"timezone": "America/Vancouver",
+
+
+"GMT": "-8",
+
+
+"phone": "",
+
+
+"nameCountry": "Canada",
+
+
+"codeIso2Country": "CA",
+
+
+"codeIataCity": "YCD",
+
+
+"distance": "52.99999630101032"
+
+},
+
+{
+
+
+"nameAirport": "Waldron Island",
+
+
+"codeIataAirport": "WDN",
+
+
+"codeIcaoAirport": "",
+
+
+"nameTranslations": "Waldron Island,Waldron Island",
+
+
+"latitudeAirport": "48.716667",
+
+
+"longitudeAirport": "-123.03333",
+
+
+"timezone": "America/Los_Angeles",
+
+
+"GMT": "-8",
+
+
+"phone": "",
+
+
+"nameCountry": "United States",
+
+
+"codeIso2Country": "US",
+
+
+"codeIataCity": "WDN",
+
+
+"distance": "54.5394452367885"
+
+},
+
+{
+
+
+"nameAirport": "Orcas Island",
+
+
+"codeIataAirport": "ESD",
+
+
+"codeIcaoAirport": "KORS",
+
+
+"nameTranslations": "Orcas Island,Orcas Island,Orcas Island,Orcas Island,Orcas Island,?????????????????,Orcas Island Havaliman?,?????",
+
+
+"latitudeAirport": "48.708332",
+
+
+"longitudeAirport": "-122.9125",
+
+
+"timezone": "America/Los_Angeles",
+
+
+"GMT": "-8",
+
+
+"phone": "",
+
+
+"nameCountry": "United States",
+
+
+"codeIso2Country": "US",
+
+
+"codeIataCity": "ESD",
+
+
+"distance": "57.82878323710344"
+
+},
+
+{
+
+
+"nameAirport": "Stuart Island",
+
+
+"codeIataAirport": "SSW",
+
+
+"codeIcaoAirport": "",
+
+
+"nameTranslations": "Stuart Island,???????",
+
+
+"latitudeAirport": "48.67288",
+
+
+"longitudeAirport": "-123.17574",
+
+
+"timezone": "America/Los_Angeles",
+
+
+"GMT": "-8",
+
+
+"phone": "",
+
+
+"nameCountry": "United States",
+
+
+"codeIso2Country": "US",
+
+
+"codeIataCity": "SSW",
+
+
+"distance": "58.329929638664765"
+
+},
+
+{
+
+
+"nameAirport": "Duncan/Quam",
+
+
+"codeIataAirport": "DUQ",
+
+
+"codeIcaoAirport": "CAM3",
+
+
+"nameTranslations": "Duncan/Quam,????",
+
+
+"latitudeAirport": "48.783333",
+
+
+"longitudeAirport": "-123.7",
+
+
+"timezone": "America/Vancouver",
+
+
+"GMT": "-8",
+
+
+"phone": "",
+
+
+"nameCountry": "Canada",
+
+
+"codeIso2Country": "CA",
+
+
+"codeIataCity": "DUQ",
+
+
+"distance": "59.61535614733027"
+
+},
+
+{
+
+
+"nameAirport": "Abbotsford",
+
+
+"codeIataAirport": "YXX",
+
+
+"codeIcaoAirport": "CYXX",
+
+
+"nameTranslations": "Abbotsford,Abbotsford,Abbotsford,Abbotsford,Abbotsford,??????????????????,???????",
+
+
+"latitudeAirport": "49.025555",
+
+
+"longitudeAirport": "-122.361946",
+
+
+"timezone": "America/Vancouver",
+
+
+"GMT": "-8",
+
+
+"phone": "",
+
+
+"nameCountry": "Canada",
+
+
+"codeIso2Country": "CA",
+
+
+"codeIataCity": "YXX",
+
+
+"distance": "62.70337245971083"
+
+},
+
+{
+
+
+"nameAirport": "Westsound",
+
+
+"codeIataAirport": "WSX",
+
+
+"codeIcaoAirport": "",
+
+
+"nameTranslations": "Westsound,Westsound,Westsound,Westsound,Westsound,?????????????????,???????",
+
+
+"latitudeAirport": "48.666668",
+
+
+"longitudeAirport": "-122.88333",
+
+
+"timezone": "America/Los_Angeles",
+
+
+"GMT": "-8",
+
+
+"phone": "",
+
+
+"nameCountry": "United States",
+
+
+"codeIso2Country": "US",
+
+
+"codeIataCity": "WSX",
+
+
+"distance": "62.92162509812507"
+
+},
+
+{
+
+
+"nameAirport": "Victoria International",
+
+
+"codeIataAirport": "YYJ",
+
+
+"codeIcaoAirport": "CYYJ",
+
+
+"nameTranslations": "Victoria Intl,Victoria International,Victoria Intl,Victoria Intl,Victoria Intl,????????????????????????,International,??????",
+
+
+"latitudeAirport": "48.640266",
+
+
+"longitudeAirport": "-123.43096",
+
+
+"timezone": "America/Vancouver",
+
+
+"GMT": "-8",
+
+
+"phone": "",
+
+
+"nameCountry": "Canada",
+
+
+"codeIso2Country": "CA",
+
+
+"codeIataCity": "YYJ",
+
+
+"distance": "64.59281924878131"
+
+},
+
+{
+
+
+"nameAirport": "Bellingham",
+
+
+"codeIataAirport": "BLI",
+
+
+"codeIcaoAirport": "KBLI",
+
+
+"nameTranslations": "Bellingham,Bellingham,Bellingham,Bellingham,Bellingham,????????????????,?????",
+
+
+"latitudeAirport": "48.795734",
+
+
+"longitudeAirport": "-122.53267",
+
+
+"timezone": "America/Los_Angeles",
+
+
+"GMT": "-8",
+
+
+"phone": "",
+
+
+"nameCountry": "United States",
+
+
+"codeIso2Country": "US",
+
+
+"codeIataCity": "BLI",
+
+
+"distance": "65.11875353730686"
+
+},
+
+{
+
+
+"nameAirport": "Deer Harbor",
+
+
+"codeIataAirport": "DHB",
+
+
+"codeIcaoAirport": "",
+
+
+"nameTranslations": "Deer Harbor,Deer Harbor,Deer Harbor,Deer Harbor,???? ??????? ?????? (??????????)",
+
+
+"latitudeAirport": "48.618397",
+
+
+"longitudeAirport": "-123.00596",
+
+
+"timezone": "America/Los_Angeles",
+
+
+"GMT": "-8",
+
+
+"phone": "",
+
+
+"nameCountry": "United States",
+
+
+"codeIso2Country": "US",
+
+
+"codeIataCity": "DHB",
+
+
+"distance": "65.66426292707636"
+
+},
+
+{
+
+
+"nameAirport": "Pender Harbor",
+
+
+"codeIataAirport": "YPT",
+
+
+"codeIcaoAirport": "",
+
+
+"nameTranslations": "Pender Harbor,Pender Harbor,Pender Harbor,Pender Harbor,Pender Harbor,?????",
+
+
+"latitudeAirport": "49.493492",
+
+
+"longitudeAirport": "-123.98066",
+
+
+"timezone": "America/Vancouver",
+
+
+"GMT": "-8",
+
+
+"phone": "",
+
+
+"nameCountry": "Canada",
+
+
+"codeIso2Country": "CA",
+
+
+"codeIataCity": "YPT",
+
+
+"distance": "66.73324985292459"
+
+},
+
+{
+
+
+"nameAirport": "Rosario SPB",
+
+
+"codeIataAirport": "RSJ",
+
+
+"codeIcaoAirport": "",
+
+
+"nameTranslations": "Rosario SPB,Rosario SPB,Rosario SPB,Rosario SPB,Rosario SPB,???????????",
+
+
+"latitudeAirport": "48.63333",
+
+
+"longitudeAirport": "-122.85",
+
+
+"timezone": "America/Los_Angeles",
+
+
+"GMT": "-8",
+
+
+"phone": "",
+
+
+"nameCountry": "United States",
+
+
+"codeIso2Country": "US",
+
+
+"codeIataCity": "RSJ",
+
+
+"distance": "67.25922403964111"
+
+},
+
+{
+
+
+"nameAirport": "Crane Island",
+
+
+"codeIataAirport": "CKR",
+
+
+"codeIcaoAirport": "",
+
+
+"nameTranslations": "Crane Island,Crane Island",
+
+
+"latitudeAirport": "48.6",
+
+
+"longitudeAirport": "-123",
+
+
+"timezone": "America/Los_Angeles",
+
+
+"GMT": "-8",
+
+
+"phone": "",
+
+
+"nameCountry": "United States",
+
+
+"codeIso2Country": "US",
+
+
+"codeIataCity": "CKR",
+
+
+"distance": "67.75903844436776"
+
+},
+
+{
+
+
+"nameAirport": "Roche Harbor",
+
+
+"codeIataAirport": "RCE",
+
+
+"codeIcaoAirport": "",
+
+
+"nameTranslations": "Roche Harbor,Roche Harbor,Roche Harbor,Roche Harbor,Roche Harbor,???????????????????,?????",
+
+
+"latitudeAirport": "48.583332",
+
+
+"longitudeAirport": "-123.166664",
+
+
+"timezone": "America/Los_Angeles",
+
+
+"GMT": "-8",
+
+
+"phone": "",
+
+
+"nameCountry": "United States",
+
+
+"codeIso2Country": "US",
+
+
+"codeIataCity": "RCE",
+
+
+"distance": "68.30839378737714"
+
+},
+
+{
+
+
+"nameAirport": "Friday Harbor SPB",
+
+
+"codeIataAirport": "FBS",
+
+
+"codeIcaoAirport": "",
+
+
+"nameTranslations": "Friday Harbor SPB,Friday Harbor SPB,Friday Harbor SPB,Friday Harbor SPB,Friday Harbor SPB,???????????????????????????????",
+
+
+"latitudeAirport": "48.54361",
+
+
+"longitudeAirport": "-123.00611",
+
+
+"timezone": "America/Los_Angeles",
+
+
+"GMT": "-8",
+
+
+"phone": "",
+
+
+"nameCountry": "United States",
+
+
+"codeIso2Country": "US",
+
+
+"codeIataCity": "FBS",
+
+
+"distance": "73.84872410955629"
+
+},
+
+{
+
+
+"nameAirport": "Friday Harbor",
+
+
+"codeIataAirport": "FRD",
+
+
+"codeIcaoAirport": "KFHR",
+
+
+"nameTranslations": "Friday Harbor,Friday Harbor,Friday Harbor,Friday Harbor,Friday Harbor,????????????????????????,Friday Harbor Havaliman?,??????",
+
+
+"latitudeAirport": "48.524807",
+
+
+"longitudeAirport": "-123.0265",
+
+
+"timezone": "America/Los_Angeles",
+
+
+"GMT": "-8",
+
+
+"phone": "",
+
+
+"nameCountry": "United States",
+
+
+"codeIso2Country": "US",
+
+
+"codeIataCity": "FRD",
+
+
+"distance": "75.67334674528033"
+
+},
+
+{
+
+
+"nameAirport": "Blakely Island",
+
+
+"codeIataAirport": "BYW",
+
+
+"codeIcaoAirport": "",
+
+
+"nameTranslations": "Blakely Island,Blakely Is Belediyesi Havaliman?,??????",
+
+
+"latitudeAirport": "48.5",
+
+
+"longitudeAirport": "-123",
+
+
+"timezone": "America/Los_Angeles",
+
+
+"GMT": "-8",
+
+
+"phone": "",
+
+
+"nameCountry": "United States",
+
+
+"codeIso2Country": "US",
+
+
+"codeIataCity": "BYW",
+
+
+"distance": "78.7106036202049"
+
+},
+
+{
+
+
+"nameAirport": "Decatur Island",
+
+
+"codeIataAirport": "DTR",
+
+
+"codeIcaoAirport": "",
+
+
+"nameTranslations": "Decatur Island,??????",
+
+
+"latitudeAirport": "48.516666",
+
+
+"longitudeAirport": "-122.833336",
+
+
+"timezone": "America/Los_Angeles",
+
+
+"GMT": "-8",
+
+
+"phone": "",
+
+
+"nameCountry": "United States",
+
+
+"codeIso2Country": "US",
+
+
+"codeIataCity": "DTR",
+
+
+"distance": "79.90368948496675"
+
+},
+
+{
+
+
+"nameAirport": "Lopez Island",
+
+
+"codeIataAirport": "LPS",
+
+
+"codeIcaoAirport": "",
+
+
+"nameTranslations": "Lopez Island,Lopez Island,Lopez Island,Lopez Island,Lopez Island,??????",
+
+
+"latitudeAirport": "48.482777",
+
+
+"longitudeAirport": "-122.935555",
+
+
+"timezone": "America/Los_Angeles",
+
+
+"GMT": "-8",
+
+
+"phone": "",
+
+
+"nameCountry": "United States",
+
+
+"codeIso2Country": "US",
+
+
+"codeIataCity": "LPS",
+
+
+"distance": "81.51447723108095"
+
+},
+
+{
+
+
+"nameAirport": "Langford Railway Station",
+
+
+"codeIataAirport": "XEJ",
+
+
+"codeIcaoAirport": "",
+
+
+"nameTranslations": "Langford Railway Station",
+
+
+"latitudeAirport": "48.44963",
+
+
+"longitudeAirport": "-123.50261",
+
+
+"timezone": "America/Vancouver",
+
+
+"GMT": "-8",
+
+
+"phone": "",
+
+
+"nameCountry": "Canada",
+
+
+"codeIso2Country": "CA",
+
+
+"codeIataCity": "XEJ",
+
+
+"distance": "86.45436832793342"
+
+},
+
+{
+
+
+"nameAirport": "Esquimalt",
+
+
+"codeIataAirport": "YPF",
+
+
+"codeIcaoAirport": "",
+
+
+"nameTranslations": "Esquimalt",
+
+
+"latitudeAirport": "48.433334",
+
+
+"longitudeAirport": "-123.4",
+
+
+"timezone": "America/Vancouver",
+
+
+"GMT": "-8",
+
+
+"phone": "",
+
+
+"nameCountry": "Canada",
+
+
+"codeIso2Country": "CA",
+
+
+"codeIataCity": "YPF",
+
+
+"distance": "86.49891958600033"
+
+},
+
+{
+
+
+"nameAirport": "Anacortes",
+
+
+"codeIataAirport": "OTS",
+
+
+"codeIcaoAirport": "",
+
+
+"nameTranslations": "Anacortes,Ancortes Havaliman?,???????",
+
+
+"latitudeAirport": "48.49917",
+
+
+"longitudeAirport": "-122.66111",
+
+
+"timezone": "America/Los_Angeles",
+
+
+"GMT": "-8",
+
+
+"phone": "",
+
+
+"nameCountry": "United States",
+
+
+"codeIso2Country": "US",
+
+
+"codeIataCity": "OTS",
+
+
+"distance": "86.52638008406922"
+
+},
+
+{
+
+
+"nameAirport": "Victoria Inner Harbor",
+
+
+"codeIataAirport": "YWH",
+
+
+"codeIcaoAirport": "CYWH",
+
+
+"nameTranslations": "Victoria,Victoria Inner Harbor,Victoria,Victoria,Victoria,????????? ???????? ?????????,Inner Harbor,????",
+
+
+"latitudeAirport": "48.416668",
+
+
+"longitudeAirport": "-123.36667",
+
+
+"timezone": "America/Vancouver",
+
+
+"GMT": "-8",
+
+
+"phone": "",
+
+
+"nameCountry": "Canada",
+
+
+"codeIso2Country": "CA",
+
+
+"codeIataCity": "YYJ",
+
+
+"distance": "87.9131942116262"
+
+},
+
+{
+
+
+"nameAirport": "Qualicum",
+
+
+"codeIataAirport": "XQU",
+
+
+"codeIcaoAirport": "",
+
+
+"nameTranslations": "Qualicum,Qualicum,Qualicum,Qualicum,Qualicum,??????",
+
+
+"latitudeAirport": "49.340153",
+
+
+"longitudeAirport": "-124.39587",
+
+
+"timezone": "America/Vancouver",
+
+
+"GMT": "-8",
+
+
+"phone": "",
+
+
+"nameCountry": "Canada",
+
+
+"codeIso2Country": "CA",
+
+
+"codeIataCity": "XQU",
+
+
+"distance": "89.66809750033195"
+
+},
+
+{
+
+
+"nameAirport": "Blubber Bay",
+
+
+"codeIataAirport": "XBB",
+
+
+"codeIcaoAirport": "",
+
+
+"nameTranslations": "Blubber Bay,???????",
+
+
+"latitudeAirport": "50",
+
+
+"longitudeAirport": "-123",
+
+
+"timezone": "America/Vancouver",
+
+
+"GMT": "-8",
+
+
+"phone": "",
+
+
+"nameCountry": "Canada",
+
+
+"codeIso2Country": "CA",
+
+
+"codeIataCity": "XBB",
+
+
+"distance": "90.40304194914694"
+
+},
+
+{
+
+
+"nameAirport": "Chilliwack Municipalcipal Airport",
+
+
+"codeIataAirport": "YCW",
+
+
+"codeIcaoAirport": "CYCW",
+
+
+"nameTranslations": "Chilliwack Municipalcipal Airport,Chilliwack Havaliman?,??????",
+
+
+"latitudeAirport": "49.166668",
+
+
+"longitudeAirport": "-121.9",
+
+
+"timezone": "America/Vancouver",
+
+
+"GMT": "-8",
+
+
+"phone": "",
+
+
+"nameCountry": "Canada",
+
+
+"codeIso2Country": "CA",
+
+
+"codeIataCity": "YCW",
+
+
+"distance": "93.3348854477936"
+
+}
+]

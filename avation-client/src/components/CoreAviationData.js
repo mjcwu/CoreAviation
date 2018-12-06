@@ -15,7 +15,7 @@ class CoreAviationData extends Component {
       airline: null,
       flight: null,
       flightNum: null,
-      aircraftRegi: null
+      aircraftReg: null
     };
     this.userInput = this.userInput.bind(this);
   }
