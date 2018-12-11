@@ -15,8 +15,6 @@ export class MapContainer extends Component {
 
     this.onMapClicked = this.onMapClicked.bind(this);
     this.onMarkerClick = this.onMarkerClick.bind(this);
-    // this.onMouseoverMarker = this.onMouseoverMarker.bind(this);
-    // this.onMouseout = this.onMouseout.bind(this);
 }
 
   state = {
@@ -29,12 +27,7 @@ export class MapContainer extends Component {
   this.setState({
     selectedPlace: props,
     activeMarker: marker,
-    showingInfoWindow: true,
-    // combineCoord: this.state.combineCoord.concat([{
-    //   lat: this.props.flightInfo.latitude, 
-    //   lng: this.props.flightInfo.longitude
-    // }])
-    
+    showingInfoWindow: true,    
   });
   
   
@@ -46,25 +39,6 @@ export class MapContainer extends Component {
       })
     }
   };
-
-  // onMouseoverMarker(props, marker, e) {
-  //   this.setState({
-  //     selectedPlace: props,
-  //     activeMarker: marker,
-  //     showingInfoWindow: true,
-  //     fillColor: "#B22222"
-  // });
-  // }
-
-  // onMouseout(props, marker, e) {
-  //   if (this.state.showingInfoWindow) {
-    //   this.setState({
-    //     showingInfoWindow: false,
-    //     activeMarker: null,
-    //     fillColor: '#808000',
-    //   })
-    // }
-  // }
       
   render() {
     const google = window.google
@@ -78,7 +52,7 @@ export class MapContainer extends Component {
       anchor: new google.maps.Point(4666.66, 4666.66),
       strokeWeight: 0.5,
     }
-        
+
     return (
       <div className="googleContent">
         <Map google={this.props.google}
@@ -102,38 +76,67 @@ export class MapContainer extends Component {
             name={'Current location'}
             position={{
               lat: this.props.flightInfo.latitude, 
-              lng: this.props.flightInfo.longitude}}
-              
+              lng: this.props.flightInfo.longitude}} 
             icon={ icon }
-            // onMouseover={this.onMouseoverMarker}
           />: ''}
-          {/* {console.log(this.state.combineCoord)} */}
-          {/* { this.state.combineCoord? 
-          <Polyline
-            path={this.state.combineCoord}
-            strokeColor="#0000FF"
-            strokeOpacity={0.8}
-            strokeWeight={5} />: ''} */}
-        
-          <InfoWindow
+          
+          <InfoWindow 
           marker={this.state.activeMarker}
           visible={this.state.showingInfoWindow}>
             <div className="flightInfo">
-              <p>
-                <div className="flightinfoHeader">
-                  Flight: {this.props.flightInfo.flight} <br/>
-                </div>
-                <small>
-                  Type: {this.props.flightInfo.aircraftype} <br/>
-                  Airline: {this.props.flightInfo.airline} <br/>
-                  Departure: {this.props.flightInfo.departure} <br/>
-                  Arrival: {this.props.flightInfo.arrival} <br/>
-                  Speed: {this.props.flightInfo.speed} km/hr <br/>
-                </small>
+              <div>
                 <div className="flightInfoPic">
-                  {this.pickPic(this.props.flightInfo.aircraftype)}
+                  <img src={B747Pic} alt="B747Pic" style = {{
+                    width: '250px',
+                    height: 'auto'
+                  }}/> 
                 </div>
-              </p>
+                <div className="flightInfoHeader">
+                  <div className="flightInfoHeaderFlight">
+                    {this.props.flightInfo.flight} <br/>
+                  </div>
+                  <div className="flightInfoHeaderAirline">
+                    {this.props.flightInfo.airline} <br/>
+                  </div>
+                </div>
+                <div className="flightInfoDestination">
+                  <div className="flightInfoDep">
+                    {this.props.flightInfo.departure} 
+                  </div>
+                  <div className="flightInfoArrow">
+                    ➡
+                  </div>
+                  <div className="flightInfoArr">
+                    {this.props.flightInfo.arrival} <br/>
+                  </div>
+                </div>
+                <div className="flightInfoDestinationTitle">
+                  <div className="flightInfoDepTitle">
+                    Departure
+                  </div>
+                  <div className="flightInfoArrTitle">
+                    Arrival <br/>
+                  </div>
+                </div>
+                <div className="flightInfoDetail">
+                  <div className="flightInfoModel">
+                    <div className="flightInfoModelTitle">
+                      Type: <br/>
+                    </div>
+                    <div className="flightInfoModelType">
+                      {this.props.flightInfo.aircraftype} <br/>
+                    </div>
+                  </div>
+                  <div className="flightInfoSpeed">
+                    <div className="flightInfoSpeedTitle">
+                      Speed: <br/>
+                    </div>
+                    <div className="flightInfoSpeedNum">
+                      {this.props.flightInfo.speed} km/hr <br/>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </InfoWindow>
         </Map>
@@ -143,6 +146,5 @@ export class MapContainer extends Component {
 }
  
 export default GoogleApiWrapper({
-  apiKey: 'AIzaSyAyesbQMyKVVbBgKVi2g6VX7mop2z96jBo'
-  // apiKey: API_Key.googleMapAPI
+  apiKey: API_Key.googleMapAPI2
 })(MapContainer)

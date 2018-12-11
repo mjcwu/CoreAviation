@@ -41,6 +41,7 @@ class CoreAviationSearch extends Component {
       });
     } else {
       Aviation.aircraftRegSearch(props.aircraftReg).then(flightInfo => {
+        console.log(flightInfo[0].geography.longitude)
         this.setState({
           longitude: flightInfo[0].geography.longitude,
           latitude: flightInfo[0].geography.latitude,
