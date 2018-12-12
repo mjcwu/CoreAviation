@@ -12,9 +12,7 @@ const fetch = require('node-fetch');
 //   }
 // });
 
-const api_key = require('../private/api_key');
-const API_KEY = api_key.aviationEdgeAPI;
-const flightTrackerURL = `http://aviation-edge.com/v2/public/flights?key=${API_KEY}&`;
+const API_KEY = require('../private/api_key');
 const flightIATA = `flightIata=`;
 
 router.get("/", (req, res) => {
@@ -43,7 +41,7 @@ async function fetchMachine(){
 
 async function fetchingData() {
   console.log(`fetching ac34`);
-  let flightDataObtained = await fetch (`${flightTrackerURL}${flightIATA}ac34`).then(res => res.json())
+  let flightDataObtained = await fetch (`${API_KEY.aviationEdgeAPI}${flightIATA}ac34`).then(res => res.json())
   
   if(flightDataObtained){
     console.log("---- Data Received ----");
