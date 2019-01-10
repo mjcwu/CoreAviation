@@ -10,6 +10,7 @@ body {
   
 }
 
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
@@ -53,16 +54,14 @@ main {
 /* ------ input page ------ */
 
 .AviationInput{
-  display:flex;
+  display: flex;
   flex-direction: column;
   text-align: center;
-  justify-content:center;
 }
 
 .avuserInput{
-  display:flex;
+  display: flex;
   flex-direction: row;
-  text-align: center;
   justify-content:center;
   margin-bottom: 7px;
 }
@@ -74,6 +73,12 @@ main {
 
 .aircraftReg{
   margin-left: 7px;
+}
+
+.flightOr {
+  margin-left: 7px;
+  margin-right: 7px;
+  align-content: space-around;
 }
 
 /* ------ search page ------ */
@@ -99,8 +104,6 @@ main {
 }
 
 .flightInfo{
-  background-attachment:	#6975A6;
-  color: white;
   font-size: 150%;
   margin: 0;
   padding: 3px;
@@ -109,7 +112,7 @@ main {
 }
 
 .flightInfoHeader{
-  background-color:	#6975A6;
+  background-color:	black;
   color: white;
   margin-bottom: 7px;
 }
@@ -122,26 +125,33 @@ main {
 }
 
 .flightInfoHeaderAirline {
-  font-size: 120%;
+  font-size: 80%;
+  text-align: center;
   padding-left: 7px;
   padding-bottom: 7px;
 }
 
 .flightInfoDestination{
-  background-color:	#6975A6;
-  color: white;
+  background-color:	#DCDCDC;
+  color: black;
   text-align: center;
   display: flex;  
   flex-flow: row;
   justify-content: space-evenly;
-  
+}
+
+.flightInfoDep {
+  text-decoration: underline;
+}
+
+.flightInfoArr {
+  text-decoration: underline;
 }
 
 .flightInfoDestination div {
-  background-color:	#6975A6;
-  color: white;
+  background-color:	#DCDCDC;
+  color: black;
   text-align: center;
-  margin-bottom: 7px;
   font-weight: bold;
   font-size: 150%;
   display: flex;  
@@ -149,8 +159,8 @@ main {
 }
 
 .flightInfoDestinationTitle{
-  background-color:	#6975A6;
-  color: white;
+  background-color:	#DCDCDC;
+  color: black;
   text-align: center;
   margin-bottom: 7px;
   display: flex;  
@@ -160,17 +170,26 @@ main {
 }
 
 .flightInfoDestinationTitle * {
-  font-size: 90%;
+  font-size: 80%;
+}
+
+.flightInfoArrTitle {
+  width: 45%;
+}
+
+.flightInfoDepTitle {
+  width: 45%;
 }
 
 .flightInfoModel {
-  background-color:	#6975A6;
-  color: white;
+  background-color:	#DCDCDC;
+  color: black;
   flex-flow: column;
 }
 
 .flightInfoModelTitle {
   font-size: 80%;
+  text-align: left;
   padding-left: 7px;
   padding-top: 7px;
 }
@@ -182,18 +201,19 @@ main {
 }
 
 .flightInfoDetail{
-  background-color:	#6975A6;
-  color: white;
+  background-color:	#DCDCDC;
+  color: black;
 }
 
 .flightInfoSpeed {
-  background-color:	#6975A6;
-  color: white;
+  background-color:	#DCDCDC;
+  color: black;
   flex-flow: column;
 }
 
 .flightInfoSpeedTitle {
   font-size: 80%;
+  text-align: left;
   padding-left: 7px;
 }
 
@@ -202,7 +222,13 @@ main {
   font-weight: bold;
 }
 
-.gm-style-iw {
-  display: flex;
+.GoogleMapWrapper {
+  height: '75%';
+  width: '75%';
+  justify-content: space-around;
 }
 
+.gm-style-iw {
+  text-align:center;
+  /* background-color: #DCDCDC; */
+}

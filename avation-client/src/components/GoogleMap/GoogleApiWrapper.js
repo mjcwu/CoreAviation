@@ -39,10 +39,9 @@ export class MapContainer extends Component {
       })
     }
   };
-      
+  
   render() {
     const google = window.google
-    
     const icon = {
       path: B747Icon.path,
       fillColor: this.state.showingInfoWindow? '#B22222':"#FF00FF",
@@ -58,6 +57,7 @@ export class MapContainer extends Component {
         <Map google={this.props.google}
           onClick={this.onMapClicked}
           className={'map'}
+          style = {{height: '70%', width: '100%'}}
           zoom={9}
           initialCenter={{
             lat: 49.1967,

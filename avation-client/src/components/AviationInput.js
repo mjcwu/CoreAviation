@@ -20,11 +20,14 @@ const AviationInput = props => {
       <div className="avuserInput">
         <div className="fightNum">
           <label htmlFor="flightNum">Flight Num.</label> <br />
-          <input name="flightNum" id="flightNum" />
+          <input name="flightNum" id="flightNum" placeholder="i.e. CI32" />
+        </div>
+        <div className="flightOr">
+          or
         </div>
         <div className="aircraftReg">
           <label htmlFor="aircraftReg">Aircraft Reg.</label> <br />
-          <input name="aircraftReg" id="aircraftReg" cols="60" rows="4" />
+          <input name="aircraftReg" id="aircraftReg" placeholder="i.e. N1609" />
         </div>
       </div>
       

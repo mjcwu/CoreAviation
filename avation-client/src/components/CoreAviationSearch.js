@@ -61,9 +61,7 @@ class CoreAviationSearch extends Component {
     return(
     <main>
       <div className="CoreAviationSearch">
-        <div className="search-header">
-          <h1>🛫 Flight Search! 🛬</h1>
-        </div>
+        
         <div className="search-div-1">
           <div className="AviationInput">
             <AviationInput onSubmit={this.userInput}/>
