@@ -10,14 +10,13 @@ const NavBar = props => {
         height: '30px',
         backgroundColor: "black"
       }}/> 
-      {/* <div className="NavBar Item"> */}
         <NavLink exact to="/">
           CoreAviation
         </NavLink>
         <NavLink exact to="/coreaviation/search">
           Flight Search
         </NavLink>
-      {/* </div> */}
+      
     </nav>
   );
 };

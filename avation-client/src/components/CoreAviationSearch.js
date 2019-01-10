@@ -2,7 +2,8 @@ import React, { Component } from "react";
 import GoogleApiWrapper from "./GoogleMap/GoogleApiWrapper"
 import { Aviation } from "../request";
 import AviationInput from "./AviationInput";
-import { isNullOrUndefined } from "util";
+import ReactDom from 'react-dom';
+import Popup from 'react-popup'; 
 
 class CoreAviationSearch extends Component {
   constructor(props){
@@ -18,45 +19,56 @@ class CoreAviationSearch extends Component {
       airline: null,
       flight: null,
       flightNum: null,
-      aircraftReg: null
+      aircraftReg: null,
+      error: null
     };
     this.userInput = this.userInput.bind(this);
   }
 
   userInput(props){
-    
     if(props.flightNum){
       Aviation.flightNumSearch(props.flightNum).then(flightInfo => {
-        this.setState({
-          longitude: flightInfo[0].geography.longitude,
-          latitude: flightInfo[0].geography.latitude,
-          direction: flightInfo[0].geography.direction,
-          departure: flightInfo[0].departure.iataCode,
-          arrival: flightInfo[0].arrival.iataCode,
-          aircraftype: flightInfo[0].aircraft.iataCode,
-          airline: flightInfo[0].airline.icaoCode,
-          flight: flightInfo[0].flight.iataNumber,
-          speed: flightInfo[0].speed.horizontal
-        })
+        if(flightInfo.error){
+          console.log(flightInfo.error)
+        } else{
+          console.log("good to go")
+          this.setState({
+            longitude: flightInfo[0].geography.longitude,
+            latitude: flightInfo[0].geography.latitude,
+            direction: flightInfo[0].geography.direction,
+            departure: flightInfo[0].departure.iataCode,
+            arrival: flightInfo[0].arrival.iataCode,
+            aircraftype: flightInfo[0].aircraft.iataCode,
+            airline: flightInfo[0].airline.icaoCode,
+            flight: flightInfo[0].flight.iataNumber,
+            speed: flightInfo[0].speed.horizontal
+          })
+        }
       });
     } else {
       Aviation.aircraftRegSearch(props.aircraftReg).then(flightInfo => {
-        console.log(flightInfo[0].geography.longitude)
-        this.setState({
-          longitude: flightInfo[0].geography.longitude,
-          latitude: flightInfo[0].geography.latitude,
-          direction: flightInfo[0].geography.direction,
-          departure: flightInfo[0].departure.iataCode,
-          arrival: flightInfo[0].arrival.iataCode,
-          aircraftype: flightInfo[0].aircraft.iataCode,
-          airline: flightInfo[0].airline.icaoCode,
-          flight: flightInfo[0].flight.iataNumber,
-          speed: flightInfo[0].speed.horizontal
-        })
+        if(flightInfo.error){
+          console.log(flightInfo.error)
+          
+        } else{
+          console.log("good to go")
+          this.setState({
+            longitude: flightInfo[0].geography.longitude,
+            latitude: flightInfo[0].geography.latitude,
+            direction: flightInfo[0].geography.direction,
+            departure: flightInfo[0].departure.iataCode,
+            arrival: flightInfo[0].arrival.iataCode,
+            aircraftype: flightInfo[0].aircraft.iataCode,
+            airline: flightInfo[0].airline.icaoCode,
+            flight: flightInfo[0].flight.iataNumber,
+            speed: flightInfo[0].speed.horizontal
+          })
+        }
       });
     }
   }
 
+  
   render(){
     return(
     <main>
